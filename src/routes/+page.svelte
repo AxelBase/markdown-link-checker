@@ -8,6 +8,7 @@
   import { config } from '../lib/config';
   import { exportReport, copyToClipboard } from '../lib/exporter';
   import { base } from '$app/paths';
+  import '../app.css';
 
   const markdownContent = writable<string>('');
   const error = writable<string>('');

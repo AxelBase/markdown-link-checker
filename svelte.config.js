@@ -1,17 +1,9 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: vitePreprocess(),
-
-	kit: {
-		adapter: adapter({
-			// For SPA mode: fallback to index.html for non-prerendered routes
-			fallback: '404.html',
-			// Pre-render all pages by default
-			precompress: true,
-
+  preprocess: vitePreprocess(),
+  kit: {
     adapter: adapter({
       pages: 'docs',
       assets: 'docs',
@@ -22,12 +14,10 @@ const config = {
       base: '/markdown-link-checker'
     },
     prerender: {
-      entries: ['*'],        // ✅ correct location
+      entries: ['*'],
       handleHttpError: 'warn'
-    },
-			
-		})
-	}
+    }
+  }
 };
 
 export default config;

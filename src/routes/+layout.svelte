@@ -55,7 +55,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/bootstrap.min.css" />
+  <link rel="stylesheet" href="{base}/bootstrap.min.css" />
 </svelte:head>
 
 <!-- Page Wrapper -->
@@ -90,9 +90,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="{base}/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="{base}./#how-to">How to Use</a></li>
-          <li class="nav-item"><a class="nav-link" href="{base}./#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="{base}./#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="{base}/#how-to">How to Use</a></li>
+          <li class="nav-item"><a class="nav-link" href="{base}/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="{base}/#faq">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="{base}/blog">Blog</a></li>
         </ul>
       </div>
