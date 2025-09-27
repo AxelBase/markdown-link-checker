@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://axelbase.github.io/markdown-link-checker/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://axelbase.github.io/markdown-link-checker/blog/posts/</loc>
+    <lastmod>2025-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/broken-links-break-trust</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/client-side-validation</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/how-link-validation-works</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/optimizing-large-markdown</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/what-counts-as-valid-link</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/markdown-vs-online-validators</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/exporting-results-txt-json</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/privacy-by-design</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/common-errors-and-fixes</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/philosophy-behind-tool</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
+
+</urlset>

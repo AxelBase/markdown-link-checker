@@ -1,0 +1,64 @@
+<script>
+  import { base } from '$app/paths';
+</script>
+
+<br/>
+
+<svelte:head>
+  <title>Optimizing for Large Markdown Projects | AxelBase</title>
+  <meta name="description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale." />
+
+  <meta property="og:title" content="Optimizing for Large Markdown Projects | AxelBase" />
+  <meta property="og:description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale." />
+  <meta property="og:url" content={base + '/blog/posts/optimizing-large-markdown'} />
+  <meta property="og:type" content="article" />
+  <!-- <meta property="og:image" content={base + '/og/optimizing-large-markdown.png'} /> -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Optimizing for Large Markdown Projects | AxelBase" />
+  <meta name="twitter:description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale." />
+  <!-- <meta name="twitter:image" content={base + '/og/optimizing-large-markdown.png'} /> -->
+
+</svelte:head>
+
+<article class="w-full max-w-3xl mx-auto p-4 sm:p-8 prose prose-invert prose-headings:text-yellow-400 prose-a:text-yellow-400">
+  <h1>Optimizing for Large Markdown Projects</h1>
+  
+  <p class="text-slate-300">Published: September 26, 2025 | Last Updated: September 26, 2025</p>
+  
+  <p>Markdown documentation can scale quickly—especially in technical, educational, or compliance-driven environments. Our <a href="{base}/" class="hover:underline">Markdown Link Checker</a> is built to handle large files and complex folder structures without compromising speed or privacy.</p>
+  
+  <h2>Performance Features</h2>
+  <p>To ensure smooth validation across hundreds of links, the tool includes several configurable options:</p>
+  <ul class="list-disc pl-6 text-slate-300">
+    <li><strong>Concurrency Limit:</strong> Controls how many links are checked in parallel. Lower values reduce browser strain; higher values speed up processing.</li>
+    <li><strong>Timeout (ms):</strong> Defines how long the tool waits before marking a link as unreachable. Useful for slow or intermittent servers.</li>
+    <li><strong>Ignore Patterns:</strong> Lets you exclude known problematic domains or paths from validation.</li>
+    <li><strong>Virtual File Tree:</strong> Simulates your folder structure so relative links can be resolved accurately, even across nested directories.</li>
+  </ul>
+  
+  <h3>Best Practices</h3>
+  <p>When working with large Markdown sets, consider these tips:</p>
+  <ul class="list-disc pl-6 text-slate-300">
+    <li>Break content into modular files and validate incrementally.</li>
+    <li>Use consistent link formatting to reduce parsing errors.</li>
+    <li>Exclude known unreachable links using ignore patterns.</li>
+    <li>Test performance in different browsers—Chrome and Firefox handle concurrency best.</li>
+  </ul>
+  
+  <h2>FAQ</h2>
+  <details class="mb-4">
+    <summary class="cursor-pointer text-yellow-400">Can I validate hundreds of links?</summary>
+    <p class="text-slate-300 pl-4">Yes. The tool is designed to handle large volumes with adjustable concurrency and timeout settings.</p>
+  </details>
+  <details class="mb-4">
+    <summary class="cursor-pointer text-yellow-400">What’s the virtual file tree for?</summary>
+    <p class="text-slate-300 pl-4">It helps resolve relative links by simulating your folder structure, ensuring accurate validation across nested files.</p>
+  </details>
+  <details class="mb-4">
+    <summary class="cursor-pointer text-yellow-400">Does performance vary by browser?</summary>
+    <p class="text-slate-300 pl-4">Yes. Modern browsers like Chrome and Firefox handle concurrent requests more efficiently than others.</p>
+  </details>
+  
+  <p class="text-slate-400 italic mt-8">This post will be updated with performance benchmarks and scaling strategies for enterprise-level documentation.</p>
+</article>
