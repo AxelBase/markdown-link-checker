@@ -9,23 +9,23 @@
         
 		<link href="./_app/immutable/assets/0.DXLrjm8V.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/app.90jhCyXn.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.BvugKPa6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/LM0A6mvS.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.BirKSI-X.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DcoQY_vc.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/C3qqwBTy.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/C9xfq8eb.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/DmFMKMfy.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/BS7jdPXm.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/CrKegjFs.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.CvFg3nwl.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CHlMMRS1.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CTITSCLu.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/DsnmJJEf.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/CWf73ohL.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Bc4XuwsC.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/wj8P_VX2.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.KIT1NUdc.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.D8CXqpdO.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/C2gabavI.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/DWrPhFUl.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/CumwKbwK.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.B7J9GtGc.js"><!--[--><link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/> <link rel="stylesheet" href="./bootstrap.min.css"/><!--]--><title>Markdown Link Checker</title>
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.DWW5_ZAl.js"><!--[--><link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/> <link rel="stylesheet" href="./bootstrap.min.css"/><!--]--><title>Markdown Link Checker</title>
     </head>
     <body data-sveltekit-preload-data="hover">
         <div><!--[--><!--[--><!----><div class="page-wrapper svelte-12qhfyh"><nav class="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm"><div class="container"><a class="navbar-brand fw-bold" href="./">AxelBase</a> <div class="coffee-dropdown svelte-12qhfyh" role="group"><button class="coffee-button svelte-12qhfyh" aria-haspopup="true" aria-expanded="false"><span class="coffee-icon">☕</span> <span class="button-text">Buy me a Coffee</span></button> <!--[!--><!--]--></div> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon svelte-12qhfyh"></span></button> <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="./">Home</a></li> <li class="nav-item"><a class="nav-link" href="./#how-to">How to Use</a></li> <li class="nav-item"><a class="nav-link" href="./#about">About</a></li> <li class="nav-item"><a class="nav-link" href="./#faq">FAQ</a></li> <li class="nav-item"><a class="nav-link" href="./blog">Blog</a></li></ul></div></div></nav> <main class="container py-4 svelte-12qhfyh" style="padding-top: 80px; padding-bottom: 40px;"><!--[--><!----><br/> <br/> <div class="row"><div class="col-md-12"><h1 class="mb-4 text-center display-4">Markdown Link Checker</h1> <div class="card mb-4" style="animation-delay: 0.1s;"><div class="card-header">1. Provide Markdown</div> <div class="card-body"><div class="mb-3"><label for="fileUpload" class="form-label">Upload a .md File</label> <input type="file" class="form-control" id="fileUpload" accept=".md" aria-describedby="fileHelp"/> <div id="fileHelp" class="form-text mt-1">Select a local Markdown file from your device.</div></div> <div class="mb-3"><label for="pasteArea" class="form-label">Or Paste Content</label> <textarea class="form-control" id="pasteArea" rows="10" placeholder="Paste your Markdown content here..." aria-describedby="pasteHelp"></textarea></div> <!--[!--><!--]--></div></div> <div class="card mb-4" style="animation-delay: 0.2s;"><div class="card-header">2. Configure (Optional)</div> <div class="card-body row"><div class="col-md-6 mb-3"><label for="timeout" class="form-label">Timeout (ms)</label> <input type="number" class="form-control" id="timeout" value="5000" min="1000"/></div> <div class="col-md-6 mb-3"><label for="concurrency" class="form-label">Concurrency Limit</label> <input type="number" class="form-control" id="concurrency" value="5" min="1" max="10"/></div> <div class="col-12 mb-3"><label for="ignorePatterns" class="form-label">Ignore Patterns</label> <input type="text" class="form-control" id="ignorePatterns" placeholder="e.g. localhost, google.com" value=""/></div> <div class="col-12 mb-3"><label for="virtualFileTree" class="form-label">Virtual File Tree</label> <input type="text" class="form-control" id="virtualFileTree" value="./docs/file.md"/></div> <div class="col-12"><div class="form-check form-switch fs-5"><input type="checkbox" class="form-check-input" id="externalOnly" role="switch"/> <label class="form-check-label" for="externalOnly">Validate External Links Only</label></div></div></div></div> <div class="text-center mb-3"><button class="btn btn-primary btn-lg" disabled><!--[!-->Validate Links<!--]--></button> <div class="form-text mt-2">Results will appear here</div></div> <!--[!--><!--]--> <section id="how-to" class="my-5"><h2 class="mb-3">How to Use</h2> <p><strong>Welcome to the Markdown Link Checker</strong>, a powerful tool designed to validate and analyze links within your Markdown files with <em>precision and ease</em>.
@@ -61,7 +61,7 @@
 			
 			<script>
 				{
-					__sveltekit_6ibqm3 = {
+					__sveltekit_p6m4k8 = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						assets: "/markdown-link-checker"
 					};
@@ -69,8 +69,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.BvugKPa6.js"),
-						import("./_app/immutable/entry/app.CvFg3nwl.js")
+						import("./_app/immutable/entry/start.BirKSI-X.js"),
+						import("./_app/immutable/entry/app.CTITSCLu.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],

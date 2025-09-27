@@ -9,30 +9,30 @@
         
 		<link href="../../_app/immutable/assets/0.DXLrjm8V.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/app.90jhCyXn.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.BvugKPa6.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/LM0A6mvS.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BirKSI-X.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DcoQY_vc.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/C3qqwBTy.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/C9xfq8eb.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/DmFMKMfy.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/BS7jdPXm.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/CrKegjFs.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.CvFg3nwl.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CHlMMRS1.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CTITSCLu.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/DsnmJJEf.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/CWf73ohL.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/Bc4XuwsC.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/wj8P_VX2.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.KIT1NUdc.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.D8CXqpdO.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/C2gabavI.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/DWrPhFUl.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/CumwKbwK.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/10.BNyATCzZ.js"><!--[--><link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/> <link rel="stylesheet" href="../../bootstrap.min.css"/><!--]--><!--[--><meta name="description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale."/> <meta property="og:title" content="Optimizing for Large Markdown Projects | AxelBase"/> <meta property="og:description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale."/> <meta property="og:url" content="../../blog/posts/optimizing-large-markdown"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Optimizing for Large Markdown Projects | AxelBase"/> <meta name="twitter:description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale."/><!--]--><title>Optimizing for Large Markdown Projects | AxelBase</title>
+		<link rel="modulepreload" href="../../_app/immutable/nodes/10.DGA-b2Sh.js"><!--[--><link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/> <link rel="stylesheet" href="../../bootstrap.min.css"/><!--]--><!--[--><meta name="description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale."/> <meta property="og:title" content="Optimizing for Large Markdown Projects | AxelBase"/> <meta property="og:description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale."/> <meta property="og:url" content="../../blog/posts/optimizing-large-markdown"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/> <meta name="twitter:title" content="Optimizing for Large Markdown Projects | AxelBase"/> <meta name="twitter:description" content="Tips on using concurrency limits, virtual file trees, and timeout settings to handle complex documentation workflows at scale."/><!--]--><title>Optimizing for Large Markdown Projects | AxelBase</title>
     </head>
     <body data-sveltekit-preload-data="hover">
         <div><!--[--><!--[--><!----><div class="page-wrapper svelte-12qhfyh"><nav class="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm"><div class="container"><a class="navbar-brand fw-bold" href="../../">AxelBase</a> <div class="coffee-dropdown svelte-12qhfyh" role="group"><button class="coffee-button svelte-12qhfyh" aria-haspopup="true" aria-expanded="false"><span class="coffee-icon">☕</span> <span class="button-text">Buy me a Coffee</span></button> <!--[!--><!--]--></div> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon svelte-12qhfyh"></span></button> <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="../../">Home</a></li> <li class="nav-item"><a class="nav-link" href="../../#how-to">How to Use</a></li> <li class="nav-item"><a class="nav-link" href="../../#about">About</a></li> <li class="nav-item"><a class="nav-link" href="../../#faq">FAQ</a></li> <li class="nav-item"><a class="nav-link" href="../../blog">Blog</a></li></ul></div></div></nav> <main class="container py-4 svelte-12qhfyh" style="padding-top: 80px; padding-bottom: 40px;"><!--[--><!----><br/> <article class="w-full max-w-3xl mx-auto p-4 sm:p-8 prose prose-invert prose-headings:text-yellow-400 prose-a:text-yellow-400"><h1>Optimizing for Large Markdown Projects</h1> <p class="text-slate-300">Published: September 26, 2025 | Last Updated: September 26, 2025</p> <p>Markdown documentation can scale quickly—especially in technical, educational, or compliance-driven environments. Our <a href="../../" class="hover:underline">Markdown Link Checker</a> is built to handle large files and complex folder structures without compromising speed or privacy.</p> <h2>Performance Features</h2> <p>To ensure smooth validation across hundreds of links, the tool includes several configurable options:</p> <ul class="list-disc pl-6 text-slate-300"><li><strong>Concurrency Limit:</strong> Controls how many links are checked in parallel. Lower values reduce browser strain; higher values speed up processing.</li> <li><strong>Timeout (ms):</strong> Defines how long the tool waits before marking a link as unreachable. Useful for slow or intermittent servers.</li> <li><strong>Ignore Patterns:</strong> Lets you exclude known problematic domains or paths from validation.</li> <li><strong>Virtual File Tree:</strong> Simulates your folder structure so relative links can be resolved accurately, even across nested directories.</li></ul> <h3>Best Practices</h3> <p>When working with large Markdown sets, consider these tips:</p> <ul class="list-disc pl-6 text-slate-300"><li>Break content into modular files and validate incrementally.</li> <li>Use consistent link formatting to reduce parsing errors.</li> <li>Exclude known unreachable links using ignore patterns.</li> <li>Test performance in different browsers—Chrome and Firefox handle concurrency best.</li></ul> <h2>FAQ</h2> <details class="mb-4"><summary class="cursor-pointer text-yellow-400">Can I validate hundreds of links?</summary> <p class="text-slate-300 pl-4">Yes. The tool is designed to handle large volumes with adjustable concurrency and timeout settings.</p></details> <details class="mb-4"><summary class="cursor-pointer text-yellow-400">What’s the virtual file tree for?</summary> <p class="text-slate-300 pl-4">It helps resolve relative links by simulating your folder structure, ensuring accurate validation across nested files.</p></details> <details class="mb-4"><summary class="cursor-pointer text-yellow-400">Does performance vary by browser?</summary> <p class="text-slate-300 pl-4">Yes. Modern browsers like Chrome and Firefox handle concurrent requests more efficiently than others.</p></details> <p class="text-slate-400 italic mt-8">This post will be updated with performance benchmarks and scaling strategies for enterprise-level documentation.</p></article><!----><!--]--></main> <footer class="custom-footer svelte-12qhfyh"><div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3"><span class="footer-text">© 2025 AxelBase – Markdown Link Checker</span> <div class="footer-links d-flex gap-3 svelte-12qhfyh"><a href="../../privacy" class="footer-link svelte-12qhfyh">Privacy Policy</a> <a href="../../terms" class="footer-link svelte-12qhfyh">Terms &amp; Conditions</a></div></div></footer></div><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_6ibqm3 = {
+					__sveltekit_p6m4k8 = {
 						base: new URL("../..", location).pathname.slice(0, -1),
 						assets: "/markdown-link-checker"
 					};
@@ -40,8 +40,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.BvugKPa6.js"),
-						import("../../_app/immutable/entry/app.CvFg3nwl.js")
+						import("../../_app/immutable/entry/start.BirKSI-X.js"),
+						import("../../_app/immutable/entry/app.CTITSCLu.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 10],
