@@ -2,51 +2,33 @@
   import '../app.css';
   import { onMount } from "svelte";
   import { base } from '$app/paths';
+  import { fly } from 'svelte/transition';
 
-  const PAYPAL_ME_NAME = "AxelLab427"; // Replace with your PayPal.me username
   let dropdownOpen = false;
-  let dropdownRef = null;
-  let mouseLeaveTimeout = null;
-
-  function pay(amount: number) {
-    const url = `https://paypal.me/${encodeURIComponent(PAYPAL_ME_NAME)}/${amount}USD`;
-    window.open(url, "_blank", "noopener");
-    dropdownOpen = false;
-  }
 
   function toggleDropdown(event?: Event) {
     event?.stopPropagation?.();
     dropdownOpen = !dropdownOpen;
-    if (dropdownOpen && mouseLeaveTimeout) {
-      clearTimeout(mouseLeaveTimeout);
-    }
   }
 
   function closeDropdown() {
-    mouseLeaveTimeout = setTimeout(() => {
-      dropdownOpen = false;
-    }, 200);
+    dropdownOpen = false;
   }
 
-  function handleMenuMouseEnter() {
-    if (mouseLeaveTimeout) {
-      clearTimeout(mouseLeaveTimeout);
-    }
-  }
-
-  function handleDocumentClick(e: MouseEvent) {
-    if (dropdownRef && !dropdownRef.contains(e.target)) {
-      dropdownOpen = false;
-    }
+  function clickOutside(node: HTMLElement) {
+    const handleClick = (event: MouseEvent) => {
+      if (node && !node.contains(event.target as Node)) {
+        node.dispatchEvent(new CustomEvent('click_outside'));
+      }
+    };
+    document.addEventListener('click', handleClick, true);
+    return {
+      destroy() { document.removeEventListener('click', handleClick, true); }
+    };
   }
 
   onMount(() => {
-    if (typeof window !== "undefined") {
-      document.addEventListener("click", handleDocumentClick);
-      return () => {
-        document.removeEventListener("click", handleDocumentClick);
-      };
-    }
+    // Cleanup handled by clickOutside action
   });
 </script>
 
@@ -66,18 +48,44 @@
     <div class="container">
       <a class="navbar-brand fw-bold" href="{base}/">AxelBase</a>
 
-      <div class="coffee-dropdown" bind:this={dropdownRef} on:mouseleave={closeDropdown} role="group">
-        <button class="coffee-button" aria-haspopup="true" aria-expanded={dropdownOpen} on:click={toggleDropdown}>
-          <span class="coffee-icon">☕</span>
-          <span class="button-text">Buy me a Coffee</span>
+      <div class="coffee-dropdown position-relative ms-auto me-lg-4" use:clickOutside on:click_outside={closeDropdown}>
+        <button 
+          class="bmac-button d-flex align-items-center gap-2 text-white border-0 px-4 py-2 rounded-pill shadow-sm"
+          on:click={toggleDropdown}
+          aria-haspopup="true"
+          aria-expanded={dropdownOpen}
+          aria-label="Support options"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z" />
+          </svg>
+          <span class="d-none d-sm-inline fw-semibold">Buy me a Coffee</span>
+          <span class="d-sm-none fw-semibold">Coffee</span>
         </button>
 
         {#if dropdownOpen}
-          <div class="coffee-menu" role="menu" aria-label="Buy me a coffee" on:mouseenter={handleMenuMouseEnter} tabindex="-1">
-            <button role="menuitem" on:click={() => pay(1)}>$1</button>
-            <button role="menuitem" on:click={() => pay(3)}>$3</button>
-            <button role="menuitem" on:click={() => pay(5)}>$5</button>
-            <button role="menuitem" on:click={() => pay(10)}>$10</button>
+          <div class="bmac-dropdown mt-2" transition:fly={{ y: -10, duration: 250 }}>
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown}>
+              <span class="amount">$3</span> One Coffee
+            </a>
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown}>
+              <span class="amount">$5</span> Two Coffees
+            </a>
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown}>
+              <span class="amount">$10</span> Three Coffees
+            </a>
+
+            <a href="https://buymeacoffee.com/axelbase" target="_blank" rel="noopener" on:click={closeDropdown} class="custom-amount">
+              Custom Amount
+            </a>
+
+            <a
+              href="bitcoin:bc1q3p0e6vt492m4w4fpz5m2cl4zcfuqqkgaj6myc9?label=AxelBase&message=Buy%20me%20a%20coffee"
+              on:click={closeDropdown}
+              class="custom-amount"
+            >
+              Buy via Crypto (Bitcoin)
+            </a>
           </div>
         {/if}
       </div>
@@ -128,71 +136,96 @@
     flex: 1;
   }
 
-  .custom-footer {
-    background-color: var(--bg-light);
-    border-top: 1px solid var(--border-color);
-  }
-
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2030%2030%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20stroke%3D%22rgba(226%2C%20232%2C%20240%2C%200.9)%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M4%207h22M4%2015h22M4%2023h22%22/%3E%3C/svg%3E");
   }
 
-  .coffee-dropdown {
-    position: relative;
-    display: inline-block;
+  /* Buy Me a Coffee Button & Dropdown – using File 1's exact styling, adapted to dark theme */
+  .bmac-button {
+    background: var(--brand-green, #008f39); /* fallback to original BMC green */
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  .bmac-button:hover {
+    background: var(--brand-green-hover, #00732c);
+    transform: translateY(-1px);
   }
 
-  .coffee-button {
-    background-color: var(--color-indigo-600);
-    color: white;
-    border: none;
-    border-radius: var(--radius-md);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: background-color 0.2s var(--transition-ease), transform 0.2s var(--transition-ease);
-  }
-
-  .coffee-button:hover {
-    background-color: var(--color-indigo-800);
-    transform: scale(1.05);
-  }
-
-  .coffee-menu {
+  .bmac-dropdown {
     position: absolute;
     top: 100%;
-    left: 0;
-    background-color: #2d3748;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    z-index: 10;
-    min-width: 100px;
-    margin-top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    background: #1e293b; /* dark slate to match theme */
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 143, 57, 0.25);
+    overflow: hidden;
+    border: 1px solid rgba(0, 143, 57, 0.2);
+    z-index: 1000;
   }
 
-  .coffee-menu button {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background: none;
-    border: none;
+  .bmac-dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
     color: #e2e8f0;
-    text-align: left;
-    cursor: pointer;
-    font-size: 0.875rem;
+    text-decoration: none;
+    font-size: 0.98rem;
+    transition: all 0.2s ease;
   }
 
-  .coffee-menu button:hover {
-    background-color: var(--color-indigo-600);
+  .bmac-dropdown a:hover {
+    background: rgba(99, 102, 241, 0.3); /* accent tint for hover */
+    color: var(--accent);
+    padding-left: 28px;
+  }
+
+  .bmac-dropdown .amount {
+    font-weight: 700;
+    color: var(--brand-green, #00d66a);
+    font-size: 1.1rem;
+  }
+
+  .bmac-dropdown .custom-amount {
+    font-weight: 600;
+    color: var(--accent);
+    border-top: 1px solid #334155;
+    justify-content: center !important;
+  }
+
+  /* Existing navbar/footer styles remain unchanged */
+  .custom-navbar {
+    background-color: var(--bg-light) !important;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .custom-navbar .navbar-brand {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .custom-navbar .nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+  }
+
+  .custom-navbar .nav-link:hover {
+    color: var(--accent) !important;
+    transform: translateY(-2px);
   }
 
   .footer-links a {
-    color: var(--color-accent);
+    color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
   }
 
   .footer-links a:hover {
+    color: var(--accent);
     text-decoration: underline;
   }
 </style>
