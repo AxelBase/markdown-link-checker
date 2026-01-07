@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AxelBase – Markdown Link Checker</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+        <meta name="description" content="Privacy-first Markdown Link Checker by AxelBase. Validate links locally with no tracking or uploads." />
+        
+		<link href="../../_app/immutable/assets/0.uO9TYh-u.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/app.90jhCyXn.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/6.DxctsPhX.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BIgMB1Y3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BPflQ26M.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Y1GfAs4B.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BqePBPS-.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BBrVYUZL.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C6X9qQ54.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Dtj4AkSY.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Dsl7NSE_.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CHyqK-7X.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DsnmJJEf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DCbVtphz.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/dP0j-xHb.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.Cd4Pk8Fs.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ThSD696j.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/sqpnNwZ-.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cg4Yne3v.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/6.w37cp9Pb.js"><!--[--><link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/> <link rel="stylesheet" href="../../bootstrap.min.css"/><!--]--><!--[--><meta name="description" content="Explore how the Markdown Link Checker performs client-side HTTP requests, handles redirects, timeouts, and accurately classifies link status entirely in your browser."/> <meta property="og:title" content="How Link Validation Works in the Browser | Markdown Link Checker Blog"/> <meta property="og:description" content="Explore how the Markdown Link Checker performs client-side HTTP requests, handles redirects, timeouts, and accurately classifies link status entirely in your browser."/> <meta property="og:url" content="../../blog/posts/post2"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!--]--><title>How Link Validation Works in the Browser | Markdown Link Checker Blog</title>
+    </head>
+    <body data-sveltekit-preload-data="hover">
+        <div><!--[--><!--[--><!----><div class="page-wrapper svelte-12qhfyh"><nav class="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm svelte-12qhfyh"><div class="container"><a class="navbar-brand fw-bold svelte-12qhfyh" href="../../">AxelBase</a> <div class="coffee-dropdown position-relative ms-auto me-lg-4"><button class="bmac-button d-flex align-items-center gap-2 text-white border-0 px-4 py-2 rounded-pill shadow-sm svelte-12qhfyh" aria-haspopup="true" aria-expanded="false" aria-label="Support options"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z"></path></svg> <span class="d-none d-sm-inline fw-semibold">Buy me a Coffee</span> <span class="d-sm-none fw-semibold">Coffee</span></button> <!--[!--><!--]--></div> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon svelte-12qhfyh"></span></button> <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../">Home</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#how-to">How to Use</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#about">About</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#faq">FAQ</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../blog">Blog</a></li></ul></div></div></nav> <main class="container py-4 svelte-12qhfyh" style="padding-top: 80px; padding-bottom: 40px;"><!--[--><!----><div class="container fade-in post-layout svelte-1apmzc4" style="padding-top: 80px;"><div class="breadcrumbs svelte-1apmzc4"><a href="../../blog" class="svelte-1apmzc4">Blog</a> <span>/</span> <p class="svelte-1apmzc4">How Link Validation Works in the Browser</p></div> <article class="prose svelte-1apmzc4"><h1 class="svelte-1apmzc4">How Link Validation Works in the Browser</h1> <p class="post-meta svelte-1apmzc4">Published: January 07, 2026</p> <p class="svelte-1apmzc4">Validating links directly in the browser presents unique challenges and opportunities. The Markdown Link Checker leverages modern web APIs to perform accurate, efficient checks while respecting browser security constraints and user privacy.</p> <p class="svelte-1apmzc4">When you initiate validation, the tool first parses your Markdown content locally to extract every link—whether inline, reference-style, relative, or anchor. No server involvement occurs at this stage, keeping your content private.</p> <h2 class="svelte-1apmzc4">HTTP Request Strategy</h2> <p class="svelte-1apmzc4">For external HTTP and HTTPS links, the application uses the Fetch API to issue lightweight requests. By default, it prefers HEAD requests because they retrieve only headers, reducing bandwidth and speeding up checks. If a HEAD request fails or returns incomplete information, the tool automatically falls back to a GET request for more reliable results.</p> <p class="svelte-1apmzc4">Each request respects a configurable timeout threshold. If a server does not respond within the set time, the link is marked as unreachable. This prevents slow or unresponsive hosts from hanging the entire validation process.</p> <h2 class="svelte-1apmzc4">Handling Redirects</h2> <p class="svelte-1apmzc4">Redirects are common and usually harmless, but they deserve attention. The tool follows redirect chains and reports both the original URL and the final destination, along with the ultimate status code. This transparency helps you decide whether to update links to their canonical form.</p> <p class="svelte-1apmzc4">Status codes 301, 302, 307, and 308 trigger redirect tracking. The final response determines classification: a successful endpoint marks the link as Redirected but functional, while a broken final destination flags it as Broken.</p> <h2 class="svelte-1apmzc4">Status Classification</h2> <p class="svelte-1apmzc4">Links returning codes 200–299 are classified as Valid. Codes 400 and above indicate Broken links. Network errors, CORS restrictions on certain HEAD requests, or timeout failures also result in Broken status with explanatory notes.</p> <h2 class="svelte-1apmzc4">Concurrency Control</h2> <p class="svelte-1apmzc4">To avoid overwhelming the browser or triggering rate limits, requests run concurrently with a configurable limit—defaulting to five parallel checks. This balances speed and resource usage, ensuring smooth performance even with hundreds of links.</p> <h2 class="svelte-1apmzc4">Relative and Anchor Links</h2> <p class="svelte-1apmzc4">External link validation relies on real network requests, but relative paths and anchors require different handling. The tool supports a virtual file tree feature where you can define project structure, allowing accurate relative resolution. Anchor links are checked against extracted headings in the document itself.</p> <p class="svelte-1apmzc4">All these operations happen asynchronously in the background, with progress feedback displayed in real time. Once complete, results are presented clearly without any data ever leaving your machine.</p> <p class="svelte-1apmzc4">This client-side approach delivers fast, private, and reliable link validation tailored to modern browser capabilities.</p> <p class="italic-note svelte-1apmzc4">Understanding the validation process helps you interpret results confidently and maintain healthier documentation.</p></article></div><!----><!--]--></main> <footer class="custom-footer"><div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3"><span class="footer-text">© 2026 AxelBase – Markdown Link Checker</span> <div class="footer-links d-flex gap-3 svelte-12qhfyh"><a href="../../privacy" class="footer-link svelte-12qhfyh">Privacy Policy</a> <a href="../../terms" class="footer-link svelte-12qhfyh">Terms &amp; Conditions</a></div></div></footer></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_2pkj02 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/markdown-link-checker"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BIgMB1Y3.js"),
+						import("../../_app/immutable/entry/app.CHyqK-7X.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+    </body>
+</html>

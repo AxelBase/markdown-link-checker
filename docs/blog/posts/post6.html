@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AxelBase – Markdown Link Checker</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+        <meta name="description" content="Privacy-first Markdown Link Checker by AxelBase. Validate links locally with no tracking or uploads." />
+        
+		<link href="../../_app/immutable/assets/0.uO9TYh-u.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/app.90jhCyXn.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/10.Zh6PEcKR.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BIgMB1Y3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BPflQ26M.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Y1GfAs4B.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BqePBPS-.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BBrVYUZL.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C6X9qQ54.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Dtj4AkSY.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Dsl7NSE_.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CHyqK-7X.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DsnmJJEf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DCbVtphz.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/dP0j-xHb.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.Cd4Pk8Fs.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ThSD696j.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/sqpnNwZ-.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cg4Yne3v.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/10.BF3SX4Sv.js"><!--[--><link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/> <link rel="stylesheet" href="../../bootstrap.min.css"/><!--]--><!--[--><meta name="description" content="Discover how to use ignore patterns to skip specific domains, URLs, or patterns during validation, perfect for localhost, staging sites, or internal links."/> <meta property="og:title" content="Ignoring Domains and Using Ignore Patterns | Markdown Link Checker Blog"/> <meta property="og:description" content="Discover how to use ignore patterns to skip specific domains, URLs, or patterns during validation, perfect for localhost, staging sites, or internal links."/> <meta property="og:url" content="../../blog/posts/post6"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!--]--><title>Ignoring Domains and Using Ignore Patterns | Markdown Link Checker Blog</title>
+    </head>
+    <body data-sveltekit-preload-data="hover">
+        <div><!--[--><!--[--><!----><div class="page-wrapper svelte-12qhfyh"><nav class="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm svelte-12qhfyh"><div class="container"><a class="navbar-brand fw-bold svelte-12qhfyh" href="../../">AxelBase</a> <div class="coffee-dropdown position-relative ms-auto me-lg-4"><button class="bmac-button d-flex align-items-center gap-2 text-white border-0 px-4 py-2 rounded-pill shadow-sm svelte-12qhfyh" aria-haspopup="true" aria-expanded="false" aria-label="Support options"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z"></path></svg> <span class="d-none d-sm-inline fw-semibold">Buy me a Coffee</span> <span class="d-sm-none fw-semibold">Coffee</span></button> <!--[!--><!--]--></div> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon svelte-12qhfyh"></span></button> <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../">Home</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#how-to">How to Use</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#about">About</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#faq">FAQ</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../blog">Blog</a></li></ul></div></div></nav> <main class="container py-4 svelte-12qhfyh" style="padding-top: 80px; padding-bottom: 40px;"><!--[--><!----><div class="container fade-in post-layout svelte-q8x3kg" style="padding-top: 80px;"><div class="breadcrumbs svelte-q8x3kg"><a href="../../blog" class="svelte-q8x3kg">Blog</a> <span>/</span> <p class="svelte-q8x3kg">Ignoring Domains and Using Ignore Patterns</p></div> <article class="prose svelte-q8x3kg"><h1 class="svelte-q8x3kg">Ignoring Domains and Using Ignore Patterns</h1> <p class="post-meta svelte-q8x3kg">Published: January 07, 2026</p> <p class="svelte-q8x3kg">Not every link in your Markdown documents needs active validation. Development URLs, local references, staging environments, or third-party services with frequent downtime can clutter results with false warnings. The Markdown Link Checker solves this with flexible ignore patterns that let you exclude specific links from checking.</p> <p class="svelte-q8x3kg">The ignore patterns feature lives in the configuration panel and accepts comma-separated values. Each pattern matches against the full resolved URL, giving you precise control over what gets skipped.</p> <h2 class="svelte-q8x3kg">Common Use Cases</h2> <p class="svelte-q8x3kg">Local development servers often use localhost or 127.0.0.1 addresses that are unreachable outside your machine. Adding localhost or 127.0.0.1 to ignore patterns prevents unnecessary failed attempts during collaborative reviews.</p> <p class="svelte-q8x3kg">Staging or preview deployments typically live on temporary subdomains. Ignoring patterns like staging.example.com or *.vercel.app keeps validation focused on production links only.</p> <p class="svelte-q8x3kg">Internal company wikis or documentation behind authentication walls return errors when checked from outside the network. Patterns matching your intranet domains ensure smooth validation for public-facing content.</p> <h2 class="svelte-q8x3kg">Pattern Syntax</h2> <p class="svelte-q8x3kg">Simple domain matches work directly: enter example.com to ignore all links to that domain and subdomains. For broader coverage, use wildcard prefixes like *.example.com to catch any subdomain.</p> <p class="svelte-q8x3kg">Path-specific ignores are possible too. Adding /admin/ ignores any URL containing that path segment, useful for skipping protected areas.</p> <p class="svelte-q8x3kg">Multiple patterns combine seamlessly. Separate them with commas: localhost, 127.0.0.1, staging.mysite.com, *.github.io/wiki.</p> <h2 class="svelte-q8x3kg">How Ignored Links Appear</h2> <p class="svelte-q8x3kg">Matching links receive Ignored status in the results table. They display with grayed styling, the original URL, and line number for reference, but do not affect overall validation metrics or trigger warnings.</p> <p class="svelte-q8x3kg">This clear distinction helps reviewers understand why certain links were skipped without removing them from the report entirely.</p> <h2 class="svelte-q8x3kg">Best Practices</h2> <p class="svelte-q8x3kg">Start with common development domains in your personal workflow. For team projects, document agreed ignore patterns in project guidelines to ensure consistent results across members.</p> <p class="svelte-q8x3kg">Review ignored links periodically. As staging sites go live or local references move to production, update patterns accordingly to maintain accuracy.</p> <p class="svelte-q8x3kg">Combine ignore patterns with external-only validation mode when you want to focus solely on public HTTP links while completely bypassing internal references.</p> <p class="svelte-q8x3kg">Ignore patterns turn a universal validator into a targeted quality tool that respects your project structure and development stages.</p> <p class="svelte-q8x3kg">By excluding known-safe or irrelevant links, you streamline reviews and concentrate effort where it matters most.</p> <p class="italic-note svelte-q8x3kg">Clean results start with smart ignore patterns.</p></article></div><!----><!--]--></main> <footer class="custom-footer"><div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3"><span class="footer-text">© 2026 AxelBase – Markdown Link Checker</span> <div class="footer-links d-flex gap-3 svelte-12qhfyh"><a href="../../privacy" class="footer-link svelte-12qhfyh">Privacy Policy</a> <a href="../../terms" class="footer-link svelte-12qhfyh">Terms &amp; Conditions</a></div></div></footer></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_2pkj02 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/markdown-link-checker"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BIgMB1Y3.js"),
+						import("../../_app/immutable/entry/app.CHyqK-7X.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 10],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+    </body>
+</html>

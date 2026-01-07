@@ -1,31 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://axelbase.github.io/markdown-link-checker/</loc>
-    <lastmod>2025-09-27</lastmod>
-    <priority>1.00</priority>
+    <loc>https://timestamp-normalizer.vercel.app/</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://axelbase.github.io/markdown-link-checker/blog/posts/</loc>
-    <lastmod>2025-09-26</lastmod>
-    <priority>0.80</priority>
+    <loc>https://timestamp-normalizer.vercel.app/blog.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/broken-links-break-trust</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/client-side-validation</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/how-link-validation-works</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/optimizing-large-markdown</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/what-counts-as-valid-link</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/markdown-vs-online-validators</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/exporting-results-txt-json</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/privacy-by-design</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/common-errors-and-fixes</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-  <url><loc>https://axelbase.github.io/markdown-link-checker/blog/posts/philosophy-behind-tool</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
-
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post1.html</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post2.html</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post3.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post4.html</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post5.html</loc>
+    <lastmod>2025-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post6.html</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post7.html</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post8.html</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post9.html</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://timestamp-normalizer.vercel.app/blog/posts/post10.html</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/privacy.html</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://timestamp-normalizer.vercel.app/terms.html</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AxelBase – Markdown Link Checker</title>
+		<link rel="icon" href="../../AxelLab-Logo.ico" />
+        <meta name="description" content="Privacy-first Markdown Link Checker by AxelBase. Validate links locally with no tracking or uploads." />
+        
+		<link href="../../_app/immutable/assets/0.uO9TYh-u.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/app.90jhCyXn.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/9.Ck5Cv_QH.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BIgMB1Y3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BPflQ26M.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Y1GfAs4B.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BqePBPS-.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BBrVYUZL.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C6X9qQ54.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Dtj4AkSY.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Dsl7NSE_.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CHyqK-7X.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DsnmJJEf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DCbVtphz.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/dP0j-xHb.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.Cd4Pk8Fs.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ThSD696j.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/sqpnNwZ-.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cg4Yne3v.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/9.RH6mZjnR.js"><!--[--><link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/> <link rel="stylesheet" href="../../bootstrap.min.css"/><!--]--><!--[--><meta name="description" content="Learn how to optimize validation speed and reliability by adjusting timeout thresholds and concurrent request limits for different network conditions and document sizes."/> <meta property="og:title" content="Configuring Timeout and Concurrency Settings | Markdown Link Checker Blog"/> <meta property="og:description" content="Learn how to optimize validation speed and reliability by adjusting timeout thresholds and concurrent request limits for different network conditions and document sizes."/> <meta property="og:url" content="../../blog/posts/post5"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!--]--><title>Configuring Timeout and Concurrency Settings | Markdown Link Checker Blog</title>
+    </head>
+    <body data-sveltekit-preload-data="hover">
+        <div><!--[--><!--[--><!----><div class="page-wrapper svelte-12qhfyh"><nav class="navbar navbar-expand-lg custom-navbar fixed-top shadow-sm svelte-12qhfyh"><div class="container"><a class="navbar-brand fw-bold svelte-12qhfyh" href="../../">AxelBase</a> <div class="coffee-dropdown position-relative ms-auto me-lg-4"><button class="bmac-button d-flex align-items-center gap-2 text-white border-0 px-4 py-2 rounded-pill shadow-sm svelte-12qhfyh" aria-haspopup="true" aria-expanded="false" aria-label="Support options"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z"></path></svg> <span class="d-none d-sm-inline fw-semibold">Buy me a Coffee</span> <span class="d-sm-none fw-semibold">Coffee</span></button> <!--[!--><!--]--></div> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon svelte-12qhfyh"></span></button> <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../">Home</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#how-to">How to Use</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#about">About</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../#faq">FAQ</a></li> <li class="nav-item"><a class="nav-link svelte-12qhfyh" href="../../blog">Blog</a></li></ul></div></div></nav> <main class="container py-4 svelte-12qhfyh" style="padding-top: 80px; padding-bottom: 40px;"><!--[--><!----><div class="container fade-in post-layout svelte-1li990r" style="padding-top: 80px;"><div class="breadcrumbs svelte-1li990r"><a href="../../blog" class="svelte-1li990r">Blog</a> <span>/</span> <p class="svelte-1li990r">Configuring Timeout and Concurrency Settings</p></div> <article class="prose svelte-1li990r"><h1 class="svelte-1li990r">Configuring Timeout and Concurrency Settings</h1> <p class="post-meta svelte-1li990r">Published: January 07, 2026</p> <p class="svelte-1li990r">Performance and reliability during link validation depend heavily on network conditions and document size. The Markdown Link Checker provides two key configuration options—timeout and concurrency—to help you balance speed, accuracy, and browser resource usage.</p> <p class="svelte-1li990r">These settings appear in the configuration panel and update dynamically without page reloads.</p> <h2 class="svelte-1li990r">Understanding Timeout</h2> <p class="svelte-1li990r">The timeout value specifies how long each link check waits for a server response before giving up. Measured in milliseconds, the default sits at a reasonable middle ground, but you may need adjustment based on your environment.</p> <p class="svelte-1li990r">Slow or distant servers benefit from higher timeouts to avoid false positives. Fast local networks or strict workflows prefer lower values to fail unresponsive links quickly. Extremely high settings risk long hangs if many links are dead.</p> <h2 class="svelte-1li990r">Concurrency Limit</h2> <p class="svelte-1li990r">Concurrency controls how many link checks run simultaneously. The default of five parallel requests works well for most users, delivering quick results without overwhelming browser or network resources.</p> <p class="svelte-1li990r">Increasing concurrency speeds up validation for documents with hundreds of links, especially on powerful machines with good bandwidth. However, too many simultaneous requests can trigger rate limiting from servers, exhaust memory, or slow down other browser tabs.</p> <p class="svelte-1li990r">Lower values prove useful on slower connections, mobile devices, or when checking many links to the same domain that might impose rate limits.</p> <h2 class="svelte-1li990r">Finding the Right Balance</h2> <p class="svelte-1li990r">Start with defaults for typical use. For large documentation sets on fast connections, try raising concurrency to ten or fifteen. When dealing with flaky networks, extend timeout to ten seconds and reduce concurrency to three.</p> <p class="svelte-1li990r">The real-time progress indicator helps you observe how changes affect overall validation time. Experiment freely—settings persist only for the current session and never affect privacy.</p> <h2 class="svelte-1li990r">Practical Scenarios</h2> <p class="svelte-1li990r">Checking internal documentation behind corporate firewalls often requires longer timeouts. Validating public open-source projects with many external references benefits from higher concurrency. Pre-publish checks on laptops favor conservative settings to avoid browser strain.</p> <p class="svelte-1li990r">These controls put you in charge of the validation experience, adapting the tool to your specific workflow and constraints.</p> <p class="svelte-1li990r">Tuning timeout and concurrency transforms good results into optimal ones tailored to your needs.</p> <p class="italic-note svelte-1li990r">Fine-tune settings for faster, more reliable link checks every time.</p></article></div><!----><!--]--></main> <footer class="custom-footer"><div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3"><span class="footer-text">© 2026 AxelBase – Markdown Link Checker</span> <div class="footer-links d-flex gap-3 svelte-12qhfyh"><a href="../../privacy" class="footer-link svelte-12qhfyh">Privacy Policy</a> <a href="../../terms" class="footer-link svelte-12qhfyh">Terms &amp; Conditions</a></div></div></footer></div><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_2pkj02 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/markdown-link-checker"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BIgMB1Y3.js"),
+						import("../../_app/immutable/entry/app.CHyqK-7X.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 9],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+    </body>
+</html>
